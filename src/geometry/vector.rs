@@ -72,9 +72,9 @@ impl Vec3 {
         self.sq_magnitude().sqrt()
     }
 
-    pub fn normalise(&self) -> Self {
-        *self / self.magnitude()
-    }
+    // pub fn normalise(&self) -> Self {
+    //     *self / self.magnitude()
+    // }
 
     pub fn dot(&self, other: Vec3) -> f32 {
         self.x * other.x + self.y * other.y + self.z * other.z

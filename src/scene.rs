@@ -46,8 +46,8 @@ impl Scene {
         let fov_xz = self.fov * std::f32::consts::PI * 2.0 / 360.0;
         let fov_yz = fov_xz * (self.height as f32) / (self.width as f32);
 
-        for i in (0..self.height) {
-            for j in (0..self.width) {
+        for i in 0..self.height {
+            for j in 0..self.width {
                 let pixel_pos = Vec3 {
                     x: (j as f32 * (fov_xz / self.width as f32) - fov_xz / 2.0).tan(),
                     y: (fov_yz / 2.0 - i as f32 * (fov_yz / self.height as f32)).tan(),
